@@ -163,6 +163,11 @@
 }
    
 
+ details:has(#imago:target) summary {
+  background-color: var(--brand);
+  color: white;
+}
+
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
