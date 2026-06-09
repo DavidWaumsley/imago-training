@@ -95,7 +95,7 @@
       font-family: var(--font-heading);
       line-height: 1.2;     
       color: var(--brand);
-      letter-spacing: -0.1rem;
+      letter-spacing: -0.06rem;
     }
 
     .hero h1 {
