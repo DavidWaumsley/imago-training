@@ -579,3 +579,11 @@
     animation: none;
   }
 }
+
+#imago{
+  scroll-margin-top: 7rem;
+}
+
+.rules-card{
+  margin-top: 1.5rem;
+}
