@@ -515,7 +515,7 @@
   }
 
   .faq-list details[open] summary::after {
-    rotate: 0deg;
+    rotate: 180deg;
   }
 }
 
