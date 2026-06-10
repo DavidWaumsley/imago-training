@@ -485,3 +485,97 @@
         flex-direction: column;
       }
     }
+
+/* FAQ details animation + progressive enhancement */
+@media (prefers-reduced-motion: no-preference) {
+  .faq-list details {
+    interpolate-size: allow-keywords;
+  }
+
+  .faq-list details::details-content {
+    block-size: 0;
+    opacity: 0;
+    overflow: clip;
+    transition:
+      block-size 260ms ease,
+      opacity 220ms ease,
+      content-visibility 260ms allow-discrete;
+  }
+
+  .faq-list details[open]::details-content {
+    block-size: auto;
+    opacity: 1;
+  }
+
+  .faq-list summary::after {
+    transition:
+      rotate 220ms ease,
+      background-color 180ms ease,
+      color 180ms ease;
+  }
+
+  .faq-list details[open] summary::after {
+    rotate: 0deg;
+  }
+}
+
+/* Cross-document view transitions */
+@view-transition {
+  navigation: auto;
+}
+
+:root {
+  --page-transition-duration: 280ms;
+  --page-transition-easing: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.hero {
+  view-transition-name: hero;
+}
+
+.eyebrow [aria-current="page"] {
+  view-transition-name: active-nav;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: var(--page-transition-duration);
+  animation-timing-function: var(--page-transition-easing);
+}
+
+::view-transition-old(root) {
+  animation-name: page-slide-out;
+}
+
+::view-transition-new(root) {
+  animation-name: page-slide-in;
+}
+
+@keyframes page-slide-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-1rem);
+  }
+}
+
+@keyframes page-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
