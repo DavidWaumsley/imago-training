@@ -41,8 +41,7 @@
     }
 
     body {
-      margin-block: 0;
-margin-inline: 0;
+      margin: 0;
       font-family: var(--font-body);
       font-size: 1.05rem;
       line-height: 1.65;
@@ -75,15 +74,13 @@ margin-inline: 0;
     }
 
     .site-header {
-      padding-block-start: clamp(3rem, 6vw, 6rem);
-padding-block-end: 2rem;
+      padding: clamp(3rem, 6vw, 6rem) 0 2rem;
     }
 
     .hero {
       background: var(--brand);
       color: var(--text-inverse);     
-      padding-block: clamp(2rem, 4vw, 4rem);
-padding-inline: clamp(2rem, 4vw, 4rem);
+      padding: clamp(2rem, 4vw, 4rem);
       box-shadow: var(--shadow-soft);
       position: relative;
       overflow: hidden;
@@ -94,8 +91,7 @@ padding-inline: clamp(2rem, 4vw, 4rem);
    
 
     h1, h2, h3 {
-      margin-block: 0;
-margin-inline: 0;
+      margin: 0;
       font-family: var(--font-heading);
       line-height: 1.2;     
       color: var(--brand);
@@ -106,7 +102,7 @@ margin-inline: 0;
       color: var(--text-inverse);
       font-size: clamp(2.8rem, 2.7vw + 1rem, 4rem);
       max-width: 30ch;
-      margin-block-end: var(--space-5);
+      margin-bottom: var(--space-5);
       text-align: center;
     }
 
@@ -114,8 +110,7 @@ margin-inline: 0;
       font-size: clamp(1.05rem, 1.8vw, 1.3rem); 
       color: var(--secondary);      
       font-weight: 500;
-      margin-block: 0;
-margin-inline: 0;
+      margin: 0;
       max-width: 60ch;
       line-height: 1.4;
     }
@@ -125,10 +120,8 @@ margin-inline: 0;
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 0.85rem;
-      padding-block: 0;
-padding-inline: 0;
-      margin-block: 0 var(--space-8);
-margin-inline: 0;
+      padding: 0;
+      margin: 0 0 var(--space-8);
       max-width: 42rem;
     }
 
@@ -136,15 +129,14 @@ margin-inline: 0;
       background: hsla(0, 0%, 100%, 0.08);
       border: 1px solid hsla(0, 0%, 100%, 0.14);
       border-radius: 999px;
-      padding-block: 0.8rem;
-padding-inline: 1rem;
+      padding: 0.8rem 1rem;
       font-weight: 600;
     }
 
     .eyebrow ul{
       display: flex; 
       flex-wrap: wrap;
-      margin-block-end: 2rem;    
+      margin-bottom: 2rem ;    
     }
 
     .eyebrow li {       
@@ -156,8 +148,7 @@ padding-inline: 1rem;
     .eyebrow li a { 
       color:var(--shade-1); 
       text-decoration: none;
-      padding-block: .6rem;
-padding-inline: .6rem;  
+      padding: .6rem;  
     }
 
     .eyebrow li a:hover:not([aria-current="page"]) { 
@@ -188,8 +179,7 @@ padding-inline: .6rem;
       align-items: center;
       justify-content: center;
       min-height: 2.9rem;
-      padding-block: 0.9rem;
-padding-inline: 1.25rem;
+      padding: 0.9rem 1.25rem;
       border-radius: 999px;
       text-decoration: none;
       font-weight: 700;
@@ -229,7 +219,7 @@ padding-inline: 1.25rem;
     }
 
     section:not(.hero) {
-      padding-block: clamp(2.5rem, 5vw, 5rem);
+      padding: clamp(2.5rem, 5vw, 5rem) 0;
       width: min(100% - 2rem, var(--container));
       margin-inline: auto;
     }
@@ -251,18 +241,17 @@ padding-inline: 1.25rem;
 
     h2 {
       font-size: clamp(2.2rem, 3vw + .5rem, 3rem);
-      margin-block-end: 0.8rem;
+      margin-bottom: 0.8rem;
     }
 
     h3 {
       font-size: clamp(1.45rem, 2.4vw, 2rem);
-      margin-block-end: 0.4rem;
+      margin-bottom: 0.4rem;
     }
 
     .section-intro {
       max-width: 48rem;
-      margin-block: 0 2rem;
-margin-inline: 0;
+      margin: 0 0 2rem;
       font-size: 1.08rem;
       color: hsla(0, 0%, 12%, 0.82);
     }
@@ -290,10 +279,8 @@ margin-inline: 0;
 
     .stage-label {
       display: inline-block;
-      margin-block: 0 0.9rem;
-margin-inline: 0;
-      padding-block: 0.35rem;
-padding-inline: 0.7rem;
+      margin: 0 0 0.9rem;
+      padding: 0.35rem 0.7rem;
       border-radius: 999px;
       background: hsla(203, 36%, 32%, 0.1);
       color: var(--accent);
@@ -303,8 +290,7 @@ padding-inline: 0.7rem;
     }
 
     .stage-meta {
-      margin-block: 0 1rem;
-margin-inline: 0;
+      margin: 0 0 1rem;
       color: hsla(0, 0%, 12%, 0.7);
       font-weight: 700;
     }
@@ -319,15 +305,14 @@ margin-inline: 0;
 
     .stage-card ul,
     .rules-card ul {
-      margin-block: 1rem 1.15rem;
-margin-inline: 0;
-      padding-inline-start: 1.2rem;
+      margin: 1rem 0 1.15rem;
+      padding-left: 1.2rem;
     }
 
 
     .feature-list {
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      margin-block-start: 1.75rem;
+      margin-top: 1.75rem;
     }
 
     .feature-list article,
@@ -344,12 +329,12 @@ margin-inline: 0;
     .info-card h3,
     .rules-card h3,
     .trainer h3 {
-      margin-block-end: 0.55rem;
+      margin-bottom: 0.55rem;
     }
 
     .format-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      margin-block-end: 1.25rem;
+      margin-bottom: 1.25rem;
     }
 
     .faq-wrap {
@@ -366,20 +351,19 @@ margin-inline: 0;
     }
 
     .faq-list details {
-      border-block-end: 1px solid hsla(0, 0%, 12%, 0.08);
+      border-bottom: 1px solid hsla(0, 0%, 12%, 0.08);
       background: white;
     }
 
     .faq-list details:last-child {
-      border-block-end: 0;
+      border-bottom: 0;
     }
 
     .faq-list summary {
       list-style: none;
       cursor: pointer;
       position: relative;
-      padding-block: 1.2rem;
-padding-inline: 1.25rem 3.75rem;
+      padding: 1.2rem 3.75rem 1.2rem 1.25rem;
       font-weight: 700;
       font-size: 1.05rem;
       color: var(--brand);
@@ -392,9 +376,9 @@ padding-inline: 1.25rem 3.75rem;
     .faq-list summary::after {
       content: "+";
       position: absolute;
-      inset-inline-end: 1.25rem;
-      inset-block-start: 50%;
-      translate: 0 -50%;
+      right: 1.25rem;
+      top: 50%;
+      transform: translateY(-50%);
       width: 2rem;
       height: 2rem;
       border-radius: 50%;
@@ -419,8 +403,7 @@ padding-inline: 1.25rem 3.75rem;
     }
 
     .faq-panel {
-      padding-block: 0 1.25rem;
-padding-inline: 1.25rem;
+      padding: 0 1.25rem 1.25rem;
       color: hsla(0, 0%, 12%, 0.82);
     }
 
@@ -433,8 +416,7 @@ padding-inline: 1.25rem;
 
     .cta-panel p {
       max-width: 42rem;
-      margin-block: 0 1.4rem;
-margin-inline: 0;
+      margin: 0 0 1.4rem;
     }
 
     .small-note {
@@ -469,13 +451,12 @@ margin-inline: 0;
       }     
 
      .hero {
-        padding-block: 1.5rem;
-padding-inline: 1.5rem;
+        padding: 1.5rem;
        
       }
 
       .faq-list summary {
-        padding-inline-end: 3.2rem;
+        padding-right: 3.2rem;
       }
 
       .button {
@@ -486,63 +467,3 @@ padding-inline: 1.5rem;
         flex-direction: column;
       }
     }
-
-@view-transition {
-  navigation: auto;
-}
-
-:root {
-  --page-transition-duration: 280ms;
-  --page-transition-easing: cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-.hero {
-  view-transition-name: hero;
-}
-
-.eyebrow [aria-current="page"] {
-  view-transition-name: active-nav;
-}
-
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation-duration: var(--page-transition-duration);
-  animation-timing-function: var(--page-transition-easing);
-}
-
-::view-transition-old(root) {
-  animation-name: page-slide-out;
-}
-
-::view-transition-new(root) {
-  animation-name: page-slide-in;
-}
-
-@keyframes page-slide-out {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(-1rem);
-  }
-}
-
-@keyframes page-slide-in {
-  from {
-    opacity: 0;
-    transform: translateX(1rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  ::view-transition-old(root),
-  ::view-transition-new(root) {
-    animation: none;
-  }
-}
